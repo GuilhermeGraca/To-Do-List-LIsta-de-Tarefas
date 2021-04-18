@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+* {
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --color-btn: rgb(132, 94, 194);
+    --btn-hover: rgb(107, 75, 158);
+}
+
+body {
+    background: #654ea3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eaafc8, #654ea3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+button {
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.AddTask button,
+.PendingTasks button {
+    background-color: var(--color-btn);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.AddTask button:hover,
+.PendingTasks button:hover {
+    background-color: var(--btn-hover)
+}
+
+.App {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    min-height: 600px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.7);
+}
+
+.App h1 {
+    font-size: 2.6rem;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+
+/* Add Task */
+
+.AddTask {
+    align-self: flex-start;
+    margin: 15px 0;
+}
+
+.AddTask form {
+    display: flex;
+}
+
+.AddTask input[type="text"] {
+    color: #777777;
+    font-size: 1.3rem;
+    width: 450px;
+    padding: 15px;
+    border: 2px solid #B4B4B4;
+    outline: none;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.AddTask button {
+    width: 80px;
+    height: 58.44px;
+}
+
+
+/* Tasks */
+
+.Tasks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(29, 29, 29);
+    padding: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 12px 0;
+    background: rgba(147, 147, 147, 0.5);
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+    min-height: 77px;
+    /* padding-right: 0; */
+}
+
+.Tasks p {
+    width: 450px;
+    word-break: break-word;
+}
+
+.Tasks button {
+    background-color: #d9534f;
+    margin-left: 15px;
+    border-radius: 50%;
+    padding: 10px 13.1px;
+    display: none;
+}
+
+.Tasks:hover button {
+    display: block;
+}
+
+.Tasks button:hover {
+    background-color: #c04c48;
+}
+
+
+/* Pending Tasks */
+
+.PendingTasks {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #2a2a2a;
+}
+
+.PendingTasks button {
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-left: 10px;
+}
